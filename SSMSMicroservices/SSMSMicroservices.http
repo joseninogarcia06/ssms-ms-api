@@ -1,4 +1,4 @@
-@SSMSMicroservices_HostAddress = http://localhost:5001
+@SSMSMicroservices_HostAddress = http://localhost:5209
 
 GET {{SSMSMicroservices_HostAddress}}/weatherforecast/
 Accept: application/json

@@ -3,12 +3,12 @@ FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 WORKDIR /app
 COPY . .
 
-# Restore & publish directly using the project file
+# Restore & publish project
 RUN dotnet restore SSMSMicroservices/SSMSMicroservices.csproj
 RUN dotnet publish SSMSMicroservices/SSMSMicroservices.csproj -c Release -o /app/out
 
 # Runtime stage
-FROM mcr.microsoft.com/dotnet/aspnet:8.0
+FROM mcr.microsoft.com/dotnet/aspnet:10.0
 WORKDIR /app
 COPY --from=build /app/out .
 ENV ASPNETCORE_URLS=http://+:10000
