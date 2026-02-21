@@ -2,8 +2,10 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /app
 COPY . .
-RUN dotnet restore SSMSMicroservices.sln
-RUN dotnet publish SSMSMicroservices.sln -c Release -o /app/out
+
+# Restore & publish directly using the project file
+RUN dotnet restore SSMSMicroservices/SSMSMicroservices.csproj
+RUN dotnet publish SSMSMicroservices/SSMSMicroservices.csproj -c Release -o /app/out
 
 # Runtime stage
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
