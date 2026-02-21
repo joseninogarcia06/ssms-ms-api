@@ -31,3 +31,4 @@
 /Users/joseninogarcia/Documents/ssms-ms-api/SSMSWebAPI/obj/Debug/net10.0/SSMSWebAPI.pdb
 /Users/joseninogarcia/Documents/ssms-ms-api/SSMSWebAPI/obj/Debug/net10.0/SSMSWebAPI.genruntimeconfig.cache
 /Users/joseninogarcia/Documents/ssms-ms-api/SSMSWebAPI/obj/Debug/net10.0/ref/SSMSWebAPI.dll
+/Users/joseninogarcia/Documents/ssms-ms-api/SSMSWebAPI/obj/Debug/net10.0/SSMSWebAPI.sourcelink.json

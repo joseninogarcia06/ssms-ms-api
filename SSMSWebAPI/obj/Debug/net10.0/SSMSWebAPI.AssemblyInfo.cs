@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SSMSWebAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+884aa2c8de2651bc1efd8cf39fb1e5cc03f84330")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fe6f2bd4d434e0882b6142ac0bfab79aa6a851dd")]
 [assembly: System.Reflection.AssemblyProductAttribute("SSMSWebAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SSMSWebAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
