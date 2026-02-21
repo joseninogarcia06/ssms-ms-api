@@ -1,10 +1,12 @@
 # Build stage
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-WORKDIR /src
+WORKDIR /app
+
+COPY *.csproj ./
+RUN dotnet restore
 
 COPY . .
-
-RUN dotnet publish ssms-ms-api/ssms-ms-api.csproj -c Release -o /app/out
+RUN dotnet publish -c Release -o /app/out
 
 # Runtime stage
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
