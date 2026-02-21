@@ -1,17 +1,22 @@
+# Build stage
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /app
 
+# Copy project file and restore dependencies
+COPY *.csproj ./
+RUN dotnet restore
+
+# Copy all other files and publish
 COPY . .
+RUN dotnet publish -c Release -o /app/out
 
-# Print files to see where the .csproj is
-RUN ls -R
-
-RUN dotnet restore SSMSWebAPI.csproj
-RUN dotnet publish SSMSWebAPI.csproj -c Release -o /app/out
-
+# Runtime stage
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
+
 COPY --from=build /app/out .
+
 ENV ASPNETCORE_URLS=http://+:10000
 EXPOSE 10000
+
 ENTRYPOINT ["dotnet", "SSMSWebAPI.dll"]
