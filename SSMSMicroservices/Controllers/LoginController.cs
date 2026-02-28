@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
-[Route("api/controller/action")]
+[Route("api/[controller]/[action]")]
 public class LoginController : ControllerBase
 {
     public LoginController()
