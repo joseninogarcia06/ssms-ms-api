@@ -1,0 +1,1 @@
+public record VerifyAccountRequestDto(string UserId, string Password);
