@@ -1,0 +1,1 @@
+public record VerifyAccountResponseDto(bool success, object result);
